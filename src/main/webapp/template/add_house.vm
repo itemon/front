@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start add your house</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Add your first house(id: $secure_id)</h1>
+        <form action="/" id="add" onsubmit="return false">
+            <input name="address" value=""/>
+        </form>
+    </body>
+</html>
