@@ -9,5 +9,10 @@
         <form action="/" id="add" onsubmit="return false">
             <input name="address" value=""/>
         </form>
+         <ul>
+            #foreach ($house in $houseTypes)
+                <li>house: $house</li>
+             #end
+          </ul>
     </body>
 </html>

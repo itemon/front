@@ -5,6 +5,8 @@
  */
 package com.tujia.front.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,11 @@ public class ListController {
     @RequestMapping(value="/list/add.htm", method=RequestMethod.GET)
     public String add(Model model) {
         model.addAttribute("secure_id", Math.random());
+        List<String> houseTypes = new ArrayList<>();
+        houseTypes.add("Bussniess House");
+        houseTypes.add("Econo House");
+        houseTypes.add("Classic House");
+        model.addAttribute("houseTypes", houseTypes);
         return "add_house";
     }
 }
