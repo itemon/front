@@ -13,8 +13,23 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class House {
+    
+    public House() {
+        this(null);
+    }
+    
+    public House(String name) {
+        this.name = name;
+    }
+    
     @Override
     public String toString() {
-        return "House-id";
+        return "House " + name;
     }
+    
+    public String getName() {
+        return name;
+    }
+    
+    private String name;
 }

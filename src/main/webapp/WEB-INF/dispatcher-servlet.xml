@@ -35,14 +35,20 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
     </bean>
 
     <!-- normal jsp view
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/template/"
-          p:suffix=".html" /> -->
+<bean id="viewResolver"
+    class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+    p:prefix="/template/"
+    p:suffix=".html" /> -->
     
     <!-- for velocity view -->
     <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath" value="/template/" />
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property> 
     </bean>
     
     <bean id="vmViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
@@ -50,6 +56,9 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
         <property name="prefix" value="" />
         <property name="suffix" value=".vm" />
         <property name="order" value="1" /> 
+        <property name="contentType">
+            <value>text/html;charset=UTF-8</value>
+        </property> 
     </bean>
     
     <!--

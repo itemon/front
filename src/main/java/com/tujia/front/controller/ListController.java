@@ -5,6 +5,7 @@
  */
 package com.tujia.front.controller;
 
+import com.tujia.front.model.House;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -34,6 +35,11 @@ public class ListController {
         houseTypes.add("Econo House");
         houseTypes.add("Classic House");
         model.addAttribute("houseTypes", houseTypes);
+        
+        List<House> houses = new ArrayList<>();
+        houses.add(new House("Shark House"));
+        model.addAttribute("houses", houses);
+        
         return "add_house";
     }
 }

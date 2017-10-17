@@ -38,6 +38,16 @@
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>jsp_index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>jsp_index</servlet-name>
+        <url-pattern>/pwa/welcome</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
