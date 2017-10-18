@@ -19,7 +19,10 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
     </context:component-scan>
     
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
-    <!--<bean class="com.tujia.front.model.House" />-->
+    
+    <!--<bean id="devRestfulConfig" class="com.tujia.front.config.RestfulConfigBean">
+        <property name="host" value="www1.fvt.tujia.com"/>
+    </bean>-->
 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but

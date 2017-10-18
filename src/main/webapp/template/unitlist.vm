@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start add your house</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <h1>List of all houses</h1>
+        </main>
+        <footer>
+            <addr>query from api: $api</addr>
+        </footer>
+    </body>
+</html>

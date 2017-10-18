@@ -20,5 +20,15 @@
                 <li>house: $h.getName()</li>
                  #end
            </ul>
+
+           <hr>
+           <div>hello: $json.hello, error: $json.error</div>
+
+           <hr>
+           #set ($data = {"test":"test value test value"})
+           <h4>$data.test</h4>
+
+           <hr>
+           <h5>the debug host is: $host</h5>
     </body>
 </html>
